@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Hunt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.js" integrity="sha512-luUnkeG+uabiT2pZdi5ME5uADvq+FpDs2fK5V0nVXrHCND9F077fKaE9W//oJvGnWSmwQmCau63A6s3um1NZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body> 
+        <header class="header-container">
+            <div class="header-content">
+                <h2 class="title"><a href="/">Where in the world?</a></h2>
+                <div class="darkModeContainer">
+                    <i class="ri-moon-line" id="darkModeIcon"></i>
+                    <h4>Dark Mode</h4>
+                </div>
+            </div>
+        </header>
+        <main class="main-container">
+          <div class="search-filter-container">
+            <div class="search-bar">
+              <i class="ri-search-line"></i>
+              <input type="text" placeholder="Search for a country..." spellcheck="false">
+            </div>
+            <select>
+              <option value="initial-state" hidden>Filter by Region</option>
+              <option value="clear">Clear Filter</option>
+              <option value="Africa">Africa</option>
+              <option value="America">America</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="Oceania">Oceania</option>
+            </select>
+          </div>
+          <section class="country-container"></section>
+        </main>
+  </body>
+</html>

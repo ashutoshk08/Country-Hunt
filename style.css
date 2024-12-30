@@ -1,0 +1,191 @@
+*{ 
+   box-sizing: border-box;
+}
+
+:root{
+    --background-color: white;
+    --text-color: black;
+    --element-color: white;
+    --filter-text-color: gray;
+    --searchbar-icon: rgb(101, 101, 101);
+}
+
+body{
+    margin: 0; 
+    font-family: "Nunito", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+body.dark{
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: white;
+    --element-color: hsl(209, 23%, 22%);
+    --filter-text-color: white;
+    --searchbar-icon: white;
+}
+
+
+/* Header */
+.header-container{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-inline: 40px;
+    background-color: var(--element-color);
+}
+.header-content{
+    display: flex;
+    max-width: 1300px;
+    margin-inline: auto;  /* margin-inline means margin of left and right */
+    align-items: center;
+    justify-content: space-between;
+}
+.title{
+    font-weight: 800;
+}
+.darkModeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.darkModeContainer i{
+    cursor: pointer;
+}
+.darkModeContainer h4{
+    padding-left: 6px;
+}
+
+/* Main */
+.main-container{
+    padding-inline: 40px;
+}
+.search-bar{
+    max-width: 350px;
+    width: 100%;
+    padding: 5px 25px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--element-color);
+    color: var(--text-color);
+}
+.search-bar input{
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+    padding: 10px;
+    width: 90%;
+    color: rgb(100, 98, 98);
+    background-color: inherit;
+    color: inherit;
+}
+.search-bar i{
+    color: var(--searchbar-icon);
+}
+.search-bar input::placeholder{
+    font-size: 14px;
+    color: rgb(181, 181, 181);
+}
+.search-filter-container{
+    max-width: 1300px; 
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 50px;
+}
+.search-filter-container select{
+    width: 200px;
+    padding: 5px 20px;
+    font-size: 14px;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    background-color: var(--element-color);
+    color: var(--filter-text-color);
+    cursor: pointer;
+}
+.country-container{
+    max-width: 1300px; 
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    justify-content: space-between;
+}
+a{
+    text-decoration-line: none;
+    color: inherit;
+}
+.card{
+    display: inline-block;
+    width: 250px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    background-color: var(--element-color);
+    transition: all 0.25s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+}
+.card img{
+    width: 100%;
+}
+.card .details{
+    max-width: 84%;
+    margin-inline: auto;
+}
+.details p{
+    font-size: 14px;
+    margin: 4px;
+}
+.details h3{    
+    font-weight: 800;
+    margin-block: 16px;
+}
+
+/* Responsive */
+@media (max-width: 820px){
+    .country-container {
+        justify-content: center;
+    }
+}
+@media(min-width: 840px) and (max-width: 920px) {
+    .country-container {
+        max-width: 1300px; 
+        margin-inline: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 34px;
+        justify-content: center;
+    }
+}
+@media (max-width: 440px){
+    .search-filter-container{
+        max-width: 1300px; 
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-block: 40px;
+    }
+    .search-filter-container select{
+        width: 200px;
+        padding: 10px 20px;
+        font-size: 14px;
+        outline: 0;
+        border: 0;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        background-color: var(--element-color);
+        color: var(--filter-text-color);
+        cursor: pointer;
+    }
+    .header-content h2{
+        font-size: 20px;
+    }
+    .darkMode h4{
+        font-size: 14px;
+    }
+}
